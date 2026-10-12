@@ -1,6 +1,6 @@
 # Attendance Tracking System (OOP version)
 # Domain: Education
-# Stage 1: the Student class and objects created from it
+# Stage 2: AttendanceRegister class stores Student objects in a list
 
 TOTAL_CLASSES = 20  # total number of classes held (temporary fixed value for now)
 
@@ -34,12 +34,42 @@ class Student:
         print(f"Status: {self.check_eligibility(total_classes)}")
 
 
+class AttendanceRegister:
+    """Holds many Student objects for one course, like the lecturer's Hospital class."""
+
+    def __init__(self, course_name, total_classes):
+        self.course_name = course_name
+        self.total_classes = total_classes
+        self.students = []  # list that stores Student objects
+
+    def add_student(self, student):
+        """Add a Student object to the list."""
+        self.students.append(student)
+        print(f"{student.name} added successfully.")
+
+    def display_students(self):
+        """Loop through the list and display every student's record."""
+        print(f"\n********** {self.course_name} Attendance Register **********")
+        print(f"Total classes held: {self.total_classes}")
+
+        if len(self.students) == 0:
+            print("No student records found.")
+        else:
+            for student in self.students:
+                student.display_info(self.total_classes)
+
+
 # Creating objects from the Student class (fictional sample data)
 student1 = Student("ST001", "Aminata Kamara", 18)
 student2 = Student("ST002", "Mohamed Sesay", 12)
 student3 = Student("ST003", "Fatmata Bangura", 15)
 
-# Using the objects
-student1.display_info(TOTAL_CLASSES)
-student2.display_info(TOTAL_CLASSES)
-student3.display_info(TOTAL_CLASSES)
+# Creating a register object (it will store the Student objects)
+register = AttendanceRegister("Programming 1", TOTAL_CLASSES)
+
+# Objects interacting: the register stores and displays the students
+register.add_student(student1)
+register.add_student(student2)
+register.add_student(student3)
+
+register.display_students()
