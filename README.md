@@ -2,7 +2,7 @@
 
 A console-based Python program that records student class attendance and shows whether each student is eligible to sit the exam. Built with Object-Oriented Programming for **PROG211: Object-Oriented Programming 1** (Individual Assignment: *Real-World Solutions under DPG Standards*), Limkokwing University of Creative Technology, Sierra Leone.
 
-**Author:** [Your Full Name]
+**Author:** Desmond Hinga Kutubu-Koroma
 **Domain:** Education
 
 ## Problem being addressed
