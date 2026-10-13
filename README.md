@@ -2,7 +2,7 @@
 
 A console-based Python program that records student class attendance and shows whether each student is eligible to sit the exam. Built with Object-Oriented Programming for **PROG211: Object-Oriented Programming 1** (Individual Assignment: *Real-World Solutions under DPG Standards*), Limkokwing University of Creative Technology, Sierra Leone.
 
-**Author:** Desmond Hinga Kutubu-Koroma
+**Author:** [Your Full Name]
 **Domain:** Education
 
 ## Problem being addressed
@@ -36,7 +36,8 @@ A **list** (`self.students` inside `AttendanceRegister`) stores multiple `Studen
 **Instance methods** (use `self`, work on one student):
 - `calculate_percentage(total_classes)`: returns the attendance percentage
 - `check_eligibility(total_classes)`: returns "Eligible" or "Not Eligible"
-- `display_info(total_classes)`: prints the student's record
+- `get_summary(total_classes)`: returns the percentage and status together as a **tuple**, `(percentage, status)`
+- `display_info(total_classes)`: unpacks that tuple and prints the student's record
 
 **Class method** (uses `cls`, works with the class):
 - `get_total_students()` (decorated with `@classmethod`): returns how many `Student` objects have been created, using the shared class attribute `total_students`
