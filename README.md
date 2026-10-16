@@ -69,6 +69,8 @@ python main.py
 
 ## Example input and output
 
+![Program running in the terminal](screenshots/terminal-output.png)
+
 Values after a prompt (for example `20`) are what the user types.
 
 ```
